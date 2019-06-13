@@ -25,6 +25,7 @@ export class CustomerFormComponent implements OnInit {
   public create(): void {
     this._customer.newCustomer(this.customer)
       .subscribe(customer => {
+        console.log(customer);
         swal.fire(
           'New customer',
           `Customer ${ customer.name } created!`,
